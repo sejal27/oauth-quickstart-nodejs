@@ -1,0 +1,25 @@
+{
+	"version": 2,
+	"builds": [
+	  {
+		"src": "index.js",
+		"use": "@vercel/node",
+		"config": {
+		  "maxLambdaSize": "50mb"
+		}
+	  }
+	],
+	"routes": [
+	  {
+		"src": "/(.*)",
+		"dest": "/"
+	  }
+	],
+	"env": {
+	  "CLIENT_ID": "@CLIENT_ID",
+	  "CLIENT_SECRET": "@CLIENT_SECRET",
+	  "BASE_URL": "@BASE_URL",
+	  "SCOPE": "@SCOPE"
+	}
+  }
+  
